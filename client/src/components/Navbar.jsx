@@ -1,15 +1,19 @@
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+function Navbar() {
   return (
-    <nav className="bg-white shadow p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold text-blue-600">
-          YT Dashboard
-        </Link>
-      </div>
+    <nav className="bg-gray-800 p-4 text-white">
+      <ul className="flex space-x-4">
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        {/* Add more links as needed */}
+      </ul>
     </nav>
   );
-};
+}
 
 export default Navbar;
